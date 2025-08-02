@@ -25,7 +25,7 @@ Render Deployment Guide for DocuMind AI
 
 4. ENVIRONMENT VARIABLES:
    Add this in Render dashboard:
-   • GOOGLE_API_KEY = AIzaSyBmtycWtnrVQwBvPM3DC_uHjVYw0AnekKQ
+   • GOOGLE_API_KEY = [YOUR_GOOGLE_API_KEY_HERE]
 
 5. YOUR WEBHOOK URL WILL BE:
    https://documind-ai-hackrx.onrender.com/api/v1/hackrx/run
