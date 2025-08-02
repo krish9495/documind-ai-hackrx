@@ -9,7 +9,7 @@ import json
 import os
 
 # Configuration - UPDATE THIS WITH YOUR DEPLOYED URL
-DEPLOYED_URL = "https://your-app-name.railway.app"  # Update after deployment
+DEPLOYED_URL = "https://documind-ai-hackrx-production.railway.app"  # Update with your actual Railway URL
 API_TOKEN = "hackrx-2024-bajaj-finserv"
 
 def test_deployed_webhook():
