@@ -1,23 +1,5 @@
-# DocuMind AI - Railway Deployment (Minimal)
-fastapi==0.104.1
+﻿fastapi==0.104.1
 uvicorn==0.24.0
-python-multipart==0.0.6
 python-dotenv==1.0.0
 google-generativeai==0.3.2
-langchain==0.1.0
-langchain-google-genai==0.0.8
-faiss-cpu==1.7.4
-pypdf==3.17.4
-sentence-transformers==2.2.2
-pydantic==2.5.2
 requests==2.31.0
-
-# Vector database
-chromadb>=0.4.0
-
-# Core utilities (usually pre-installed)
-numpy>=1.20.0
-
-# Optional: Install separately if main installation fails
-# pip install torch --index-url https://download.pytorch.org/whl/cpu
-# pip install huggingface-hub tokenizers
