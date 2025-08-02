@@ -1,35 +1,16 @@
-# DocuMind AI System Requirements - Railway Deployment
-# Core FastAPI and server
+# DocuMind AI - Railway Deployment (Minimal)
 fastapi==0.104.1
-uvicorn[standard]==0.24.0
+uvicorn==0.24.0
 python-multipart==0.0.6
-python-dotenv>=1.0.0
-
-# Google AI integration
-google-generativeai>=0.5.0
-
-# Core LangChain (install first)
-langchain>=0.1.0
-langchain-community>=0.0.30
-langchain-google-genai>=1.0.0
-
-# PDF processing
-pypdf>=4.0.0
-
-# Vector database
-faiss-cpu>=1.7.4
-
-# Embeddings and transformers (may need separate installation)
-sentence-transformers>=2.5.0
-
-# Document processing
-unstructured[pdf]>=0.11.0
-
-# HTTP requests
-requests>=2.31.0
-
-# Data models
-pydantic>=2.5.0
+python-dotenv==1.0.0
+google-generativeai==0.3.2
+langchain==0.1.0
+langchain-google-genai==0.0.8
+faiss-cpu==1.7.4
+pypdf==3.17.4
+sentence-transformers==2.2.2
+pydantic==2.5.2
+requests==2.31.0
 
 # Vector database
 chromadb>=0.4.0
