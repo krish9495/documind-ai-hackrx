@@ -1,14 +1,17 @@
-﻿FROM python:3.11-slim
+﻿FROM python:3.11-alpine
 WORKDIR /app
-# Copy requirements first for better caching
+# Install minimal system deps
+RUN apk add --no-cache gcc musl-dev
+# Install only essential packages
 COPY requirements.txt .
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-# Copy the rest of the application
-COPY . .
-# Create uploads directory
+RUN pip install --no-cache-dir fastapi uvicorn python-dotenv google-generativeai requests
+# Copy only essential files
+COPY api_server.py .
+COPY advanced_rag_system.py .
+COPY .env .
+# Create uploads dir
 RUN mkdir -p uploads
-# Expose port
+# Clean up
+RUN apk del gcc musl-dev
 EXPOSE $PORT
-# Start the application
-CMD ["python", "-m", "uvicorn", "api_server:app", "--host", "0.0.0.0", "--port", "$PORT"]
+CMD ["uvicorn", "api_server:app", "--host", "0.0.0.0", "--port", "$PORT"]
