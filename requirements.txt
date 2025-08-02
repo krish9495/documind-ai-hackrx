@@ -1,0 +1,30 @@
+# DocuMind AI System Requirements - Simplified for compatibility
+# Install these packages individually if bulk installation fails
+
+# Environment management
+python-dotenv>=1.0.0
+
+# Core LangChain (install first)
+langchain>=0.1.0
+langchain-community>=0.0.30
+
+# Google AI integration
+langchain-google-genai>=1.0.0
+google-generativeai>=0.5.0
+
+# PDF processing
+pypdf>=4.0.0
+
+# Embeddings and transformers (may need separate installation)
+sentence-transformers>=2.5.0
+transformers>=4.30.0
+
+# Vector database
+chromadb>=0.4.0
+
+# Core utilities (usually pre-installed)
+numpy>=1.20.0
+
+# Optional: Install separately if main installation fails
+# pip install torch --index-url https://download.pytorch.org/whl/cpu
+# pip install huggingface-hub tokenizers

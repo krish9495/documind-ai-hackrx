@@ -1,0 +1,11 @@
+{
+    "name": "documan-ai-hackrx",
+    "version": "1.0.0",
+    "description": "DocuMind AI - HackRX 2024 Submission",
+    "scripts": {
+        "start": "uvicorn api_server:app --host 0.0.0.0 --port $PORT"
+    },
+    "engines": {
+        "python": "3.9.x"
+    }
+}
