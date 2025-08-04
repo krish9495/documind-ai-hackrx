@@ -1,10 +1,9 @@
 {
     "build": {
-        "builder": "nixpacks",
-        "buildCommand": "cd query-zenith && npm install && npm run build"
+        "builder": "nixpacks"
     },
     "deploy": {
-        "startCommand": "cd query-zenith && npm start",
+        "startCommand": "npm start",
         "restartPolicyType": "always"
     }
 }

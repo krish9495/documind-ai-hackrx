@@ -2,10 +2,10 @@
 nixPkgs = ['nodejs-18_x', 'npm-9_x']
 
 [phases.install]
-cmds = ['cd query-zenith', 'npm ci']
+cmds = ['npm install']
 
 [phases.build]
-cmds = ['cd query-zenith', 'npm run build']
+cmds = ['npm run build']
 
 [start]
-cmd = 'cd query-zenith && npm start'
+cmd = 'npm start'

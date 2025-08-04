@@ -4,11 +4,10 @@
     "description": "DocuMind AI - HackRX 2024 Submission",
     "private": true,
     "scripts": {
-        "install:app": "cd query-zenith && npm install",
-        "build:app": "cd query-zenith && npm run build",
-        "start:app": "cd query-zenith && npm start",
-        "dev:app": "cd query-zenith && npm run dev",
-        "start": "cd query-zenith && npm start"
+        "postinstall": "cd query-zenith && npm install",
+        "build": "cd query-zenith && npm run build",
+        "start": "cd query-zenith && npm start",
+        "dev": "cd query-zenith && npm run dev"
     },
     "engines": {
         "node": ">=18.0.0",
