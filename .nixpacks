@@ -1,2 +1,0 @@
-# Force Node.js detection, ignore Python files
-providers = ["node"]
