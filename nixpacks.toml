@@ -1,15 +1,15 @@
+[variables]
+NODE_VERSION = "18"
+NPM_VERSION = "9"
+
 [phases.setup]
-nixPkgs = ['nodejs-18_x', 'npm-9_x']
+nixPkgs = ["nodejs_18", "npm"]
 
 [phases.install]
-cmds = ['npm install']
+cmds = ["npm install --verbose"]
 
 [phases.build]
-cmds = ['npm run build']
+cmds = ["npm run build --verbose"]
 
 [start]
-cmd = 'npm start'
-
-# Ignore Python files during build
-[variables]
-NIXPACKS_PYTHON_VERSION = ""
+cmd = "npm start"
