@@ -22,8 +22,8 @@ logger = logging.getLogger(__name__)
 from dotenv import load_dotenv
 load_dotenv()
 
-# Configure Google AI - Force fresh reload
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "AIzaSyAxPw0Pvm08ZO4gbfnam9BbvJ4n_Dn7EqI")
+# Configure Google AI - Load from environment only
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 print(f"🔑 Loaded API Key: {GOOGLE_API_KEY[:20] if GOOGLE_API_KEY else 'None'}...")
 
 if not GOOGLE_API_KEY:
@@ -170,7 +170,11 @@ def intelligent_document_analysis(documents: Union[str, List[str]], questions: L
             logger.error("API Key issue detected - reconfiguring...")
             # Try to reconfigure with fresh API key
             try:
-                api_key = os.getenv("GOOGLE_API_KEY", "AIzaSyAxPw0Pvm08ZO4gbfnam9BbvJ4n_Dn7EqI")
+                api_key = os.getenv("GOOGLE_API_KEY")
+                if not api_key:
+                    logger.error("No API key available for retry")
+                    return [f"Error processing question: {error_msg}" for question in questions]
+                
                 genai.configure(api_key=api_key)
                 logger.info(f"Reconfigured with API key: {api_key[:20]}...")
                 
