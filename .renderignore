@@ -1,0 +1,10 @@
+# Ignore frontend files for Python backend deployment
+package.json
+package-lock.json
+node_modules/
+query-zenith/
+frontend/
+*.js
+*.ts
+*.jsx
+*.tsx
