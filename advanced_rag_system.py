@@ -48,7 +48,7 @@ try:
     LANGGRAPH_AVAILABLE = True
 except ImportError:
     LANGGRAPH_AVAILABLE = False
-    print("⚠️ LangGraph not available. Using standard LangChain workflow.")
+    # LangGraph not available - using standard LangChain workflow (this is fine)
 
 # Environment setup
 from dotenv import load_dotenv
@@ -350,6 +350,8 @@ class AdvancedRAGSystem:
             api_key = os.getenv("GOOGLE_API_KEY")
             if not api_key:
                 raise ValueError("GOOGLE_API_KEY not found in environment variables")
+            
+            print(f"🔑 Using API Key: {api_key[:20]}...")
                 
             self.llm = ChatGoogleGenerativeAI(
                 model=self.model_name,

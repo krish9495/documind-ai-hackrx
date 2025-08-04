@@ -9,3 +9,7 @@ cmds = ['npm run build']
 
 [start]
 cmd = 'npm start'
+
+# Ignore Python files during build
+[variables]
+NIXPACKS_PYTHON_VERSION = ""
